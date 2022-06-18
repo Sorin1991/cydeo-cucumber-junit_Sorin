@@ -11,16 +11,16 @@ import io.cucumber.java.BeforeStep;
 
 public class Hooks {
     // import from io.cucumber.java not from junit like in TestNG
-    @Before(order =0)
+    @Before(order =1)
     public void setupScenario(){
         System.out.println("====Setting up browser using cucumber @Before");
     }
-    @Before(value = "@login",  order = 1)
+    @Before(value = "@login",  order = 2)
     public void setupScenarioFOrLogins(){
         System.out.println("====this will only apply to scenarios with @login tag");
     }
 
-    @Before(value = "@db", order = -1)
+    @Before(value = "@db", order = 0)
     public void setupForDatabaseScenario(){
         System.out.println("====this will only apply to scenarios with @db tag");
     }
