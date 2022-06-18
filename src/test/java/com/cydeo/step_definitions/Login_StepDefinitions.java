@@ -21,12 +21,19 @@ public class Login_StepDefinitions {
     }
     @When("user enters student username")
     public void user_enters_student_username() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        System.out.println("User enters student username");
     }
     @When("user enters student password")
     public void user_enters_student_password() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        System.out.println("User enters student password");
     }
+    @When("user enters admin username")
+    public void user_enters_admin_username() {
+        System.out.println("User enters admin username");
+    }
+    @When("user enters admin password")
+    public void user_enters_admin_password() {
+        System.out.println("User enters admin password");
+    }
+
 }
