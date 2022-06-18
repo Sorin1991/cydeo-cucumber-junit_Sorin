@@ -4,6 +4,7 @@ package com.cydeo.step_definitions;
 In the class we will be able to pass pre- & post- conditions to each scenario and each step
  */
 
+import com.cydeo.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
@@ -24,10 +25,13 @@ public class Hooks {
     public void setupForDatabaseScenario(){
         System.out.println("====this will only apply to scenarios with @db tag");
     }
+
+
     @After
     public void teardownScenario(){
-        System.out.println("===Closing browser using cucumber @After");
-        System.out.println("===Scenario ended / Take screenshot if failed");
+        Driver.closeDriver();
+       // System.out.println("===Closing browser using cucumber @After");
+      //  System.out.println("===Scenario ended / Take screenshot if failed");
     }
 
     @BeforeStep
