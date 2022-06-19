@@ -13,12 +13,25 @@ public class GoogleStepDefinitions {
 
     GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
+
+    @When("user types apple and clicks enter")
+    public void user_types_and_clicks_enter2() {
+        WebElement agreeButton=Driver.getDriver().findElement(By.id("L2AGLb"));
+        agreeButton.click();
+
+        googleSearchPage.searchBox.sendKeys("apple"+Keys.ENTER);
+
+    }
+
     @When("user types {string} and clicks enter")
     public void user_types_and_clicks_enter(String searchKeyword) {
+        WebElement agreeButton=Driver.getDriver().findElement(By.id("L2AGLb"));
+        agreeButton.click();
 
         googleSearchPage.searchBox.sendKeys(searchKeyword+Keys.ENTER);
 
     }
+
     @Then("user sees {string} in the google title")
     public void user_sees_in_the_google_title(String string) {
         String expectedTitle = string +" - Google Search";
@@ -28,13 +41,7 @@ public class GoogleStepDefinitions {
         Assert.assertEquals("Title is not as expected",expectedTitle, actualTitle);
     }
 
-    @When("user types apple and clicks enter")
-    public void user_types_apple_and_clicks_enter() {
-        WebElement agreeButton=Driver.getDriver().findElement(By.id("L2AGLb"));
-        agreeButton.click();
 
-        googleSearchPage.searchBox.sendKeys("apple"+ Keys.ENTER);
-    }
     @Then("user sees apple in the google title")
     public void user_sees_apple_in_the_google_title() {
         String expectedTitle = "apple - Google Search";
@@ -49,6 +56,7 @@ public class GoogleStepDefinitions {
 
         Driver.getDriver().get("https://www.google.com");
     }
+
     @Then("user should see title is Google")
     public void user_should_see_title_is_google() {
         String expectedTitle = "Google";
