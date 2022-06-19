@@ -2,10 +2,13 @@ package com.cydeo.step_definitions;
 
 import com.cydeo.pages.WikiSearchPage;
 import com.cydeo.utilities.Driver;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 public class Wiki_StepDefinitions {
 
@@ -41,4 +44,5 @@ public class Wiki_StepDefinitions {
 
         Assert.assertTrue(wikiSearchPage.mainHeader.getText().equals(string));
     }
+
 }

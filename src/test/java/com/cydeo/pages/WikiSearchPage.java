@@ -19,4 +19,5 @@ public class WikiSearchPage {
 
     @FindBy(id = "firstHeading")
     public WebElement mainHeader;
+
 }
