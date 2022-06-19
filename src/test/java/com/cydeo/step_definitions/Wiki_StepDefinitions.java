@@ -13,7 +13,7 @@ public class Wiki_StepDefinitions {
 
     @Given("User is on Wikipedia home page")
     public void user_is_on_wikipedia_home_page() {
-        Driver.getDriver().get("https://wwww.wikipedia.org");
+        Driver.getDriver().get("https://www.wikipedia.org");
 
     }
     @When("User types {string} in the wiki search box")
