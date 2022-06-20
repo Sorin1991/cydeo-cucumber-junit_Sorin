@@ -14,7 +14,7 @@ public class WebTable_StepDefinitions {
 
     @Given("user is on the login page of web table app")
     public void user_is_on_the_login_page_of_web_table_app() {
-        String url = ConfigurationReader.getProperty("we.table.url");
+        String url = ConfigurationReader.getProperty("web.table.url");
         Driver.getDriver().get(url);
 
     }
