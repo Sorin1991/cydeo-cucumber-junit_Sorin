@@ -33,6 +33,7 @@ public class Order_StepDefinitions {
         basePage.order.click();
 
     }
+
     @When("user selects product type {string}")
     public void user_selects_product_type(String string) {
 
@@ -40,8 +41,8 @@ public class Order_StepDefinitions {
         select.selectByVisibleText(string);
 
     }
-  //  @When("user enters quantity {string}")
-   // public void user_enters_quantity(String string) {
+    //  @When("user enters quantity {string}")
+    // public void user_enters_quantity(String string) {
 
     //}
 
@@ -58,67 +59,72 @@ public class Order_StepDefinitions {
 
         //orderPage.inputQuantity.clear();
         orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE);
-        orderPage.inputQuantity.sendKeys(quantity+"");
+        orderPage.inputQuantity.sendKeys(quantity + "");
     }
-    
+
     @When("user enters customer name {string}")
     public void user_enters_customer_name(String string) {
 
         orderPage.inputName.sendKeys(string);
 
     }
+
     @When("user enters street {string}")
     public void user_enters_street(String string) {
 
         orderPage.inputStreet.sendKeys(string);
 
     }
+
     @When("user enters city {string}")
     public void user_enters_city(String string) {
 
         orderPage.inputCity.sendKeys(string);
 
     }
+
     @When("user enters state {string}")
     public void user_enters_state(String string) {
 
         orderPage.inputState.sendKeys(string);
 
     }
+
     @When("user enters zipcode {string}")
     public void user_enters_zipcode(String string) {
 
         orderPage.inputZip.sendKeys(string);
 
     }
+
     @When("user selects credit card type {string}")
     public void user_selects_credit_card_type(String expectedCardType) {
 
-        List<WebElement> cardTypes =  orderPage.cardType;
+        List<WebElement> cardTypes = orderPage.cardType;
 
         for (WebElement each : cardTypes) {
-            if(each.getAttribute("value").equals(expectedCardType)){
 
+            if (each.getAttribute("value").equalsIgnoreCase(expectedCardType)) {
                 each.click();
             }
         }
 
-
-
     }
+
     @When("user enters expiry date {string}")
     public void user_enters_expiry_date(String string) {
 
     }
+
     @When("user enters process order button")
     public void user_enters_process_order_button() {
 
     }
+
     @Then("user should see {string} in first row of the web table")
     public void user_should_see_in_first_row_of_the_web_table(String string) {
 
     }
-
 
 
 }
