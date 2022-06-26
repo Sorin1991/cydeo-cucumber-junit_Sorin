@@ -115,14 +115,20 @@ public class Order_StepDefinitions {
         BrowserUtils.clickRadioButton(orderPage.cardType, expectedCardType);
 
     }
+    @When("user enters credit card number {string}")
+    public void user_enters_credit_card_number(String string){
+        orderPage.cardNoInput.sendKeys(string);
+    }
 
     @When("user enters expiry date {string}")
     public void user_enters_expiry_date(String string) {
+        orderPage.cardExpInput.sendKeys(string);
 
     }
 
     @When("user enters process order button")
     public void user_enters_process_order_button() {
+        orderPage.processOrderBtn.click();
 
     }
 
