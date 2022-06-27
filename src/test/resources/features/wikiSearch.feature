@@ -34,5 +34,21 @@ Feature: Wikipedia search functionality and verifications
       | Lady Gaga         | Lady Gaga         | Lady Gaga          |
       | Kate Winslet      | Kate Winslet      | Kate Winslet       |
 
+    @soccerPlayers
+    Examples: search values we are going to be using in this scenario is as below
+      | searchValue       | expectedTitle     | expectedMainHeader |
+      | Steve Jobs        | Steve Jobs        | Steve Jobs         |
+      | Cristiano Ronaldo | Cristiano Ronaldo | Cristiano Ronaldo  |
+      | Bob Marley        | Bob Marley        | Bob Marley         |
+      | Chuck Norris      | Chuck Norris      | Chuck Norris       |
+      | Antony Hopkins    | Antony Hopkins    | Antony Hopkins     |
+
+    @scientists
+    Examples:
+      | searchValue  | expectedTitle | expectedMainHeader |
+      | Marie Curie  |    | Marie Curie        |
+      | Lady Gaga    | Lady Gaga     | Lady Gaga          |
+      | Kate Winslet | Kate Winslet  | Kate Winslet       |
+
 
 
